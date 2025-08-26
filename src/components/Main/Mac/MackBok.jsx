@@ -9,7 +9,7 @@ const MackBok = () => {
           <div className="title-wraper bold black">MacBook Air</div>
 
           <div className="description-wrapper black">
-            Twice the speed. Twice the storage.
+           Twice the speed. Twice the storage.
           </div>
 
           <div className="price-wrapper grey">From $999.</div>
