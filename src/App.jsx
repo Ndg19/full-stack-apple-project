@@ -13,15 +13,17 @@ import { Route, Routes } from "react-router-dom";
 import Four04 from "./pages/FourO4/FourO4";
 import "./App.css";
 import SharedLayout from "./components/SharedLayout/SharedLayout";
+import IphoneDetails from "./components/IphoneDetails"
 
 function App() {
   return (
     <Routes>
-      <Route element ={<SharedLayout />}>
+      <Route element={<SharedLayout />}>
         <Route path="/" element={<Main />} />
         <Route path="/home" element={<Home />} />
         <Route path="/mac" element={<Mac />} />
         <Route path="/iphone" element={<Iphone />} />
+        <Route path="/iphone/:id" element={<IphoneDetails />} />
         <Route path="/ipad" element={<Ipad />} />
         <Route path="/watch" element={<Watch />} />
         <Route path="/tv" element={<TV />} />

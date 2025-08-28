@@ -17,7 +17,7 @@ const Main = () => {
       <Iphone11 />
       <Tv_Watch />
       <AppleSpider />
-      <YouTubVedio/>
+      {/* <YouTubVedio/> */}
     </>
   );
 };

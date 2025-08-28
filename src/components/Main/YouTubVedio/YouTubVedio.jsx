@@ -34,7 +34,7 @@ const YouTubeVideo = () => {
             },
           }
         );
-
+console.log(res)
         setVideos(res.data.items || []);
       } catch (err) {
         console.error("Error fetching YouTube videos:", err);
