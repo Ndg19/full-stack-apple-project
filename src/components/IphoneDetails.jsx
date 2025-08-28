@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import axios from "axios";
+import axiosInstance from "../utils/axiosInstance";
 import { Container, Row, Col, Card, Button, Spinner } from "react-bootstrap";
 import FourO4 from "../pages/FourO4/FourO4";
+
 
 const IphoneDetails = () => {
   const { id } = useParams();
@@ -12,7 +13,8 @@ const IphoneDetails = () => {
   useEffect(() => {
     const fetchPhone = async () => {
       try {
-        const res = await axios.get(`http://localhost:3001/iphones/${id}`);
+        const res = await axiosInstance.get(`iphones/${id}`
+        );
         setProduct(res.data);
       } catch (err) {
         console.error("Error fetching product:", err);

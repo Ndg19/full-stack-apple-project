@@ -1,21 +1,23 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
-// import { axiosInstance } from "../../utils/axiosInstance";
+import { axiosInstance } from "../../utils/axiosInstance";
 
 function Iphone() {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    const getIphones = async () => {
-      const response = await fetch("http://localhost:3001/iphones");
-      const data = await response.json();
-      setProducts(data?.products);
-    };
     // const getIphones = async () => {
-    //   const response = await axiosInstance("iphones");
-    //   setProducts(response.data.products);
+    //   const response = await fetch("http://localhost:3001/iphones");
+    //   const data = await response.json();
+    //   setProducts(data?.products);
+    //   //console.log(products);
     // };
+    const getIphones = async () => {
+      const response = await axiosInstance("iphones");
+      setProducts(response.data.products);
+      console.log(products);
+    };
     getIphones();
-  }, []);
+  }, []);    
 
   let flip = true;
   return (
