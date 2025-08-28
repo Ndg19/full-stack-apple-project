@@ -14,7 +14,7 @@ function Iphone() {
     const getIphones = async () => {
       const response = await axiosInstance("iphones");
       setProducts(response.data.products);
-      console.log(products);
+      //console.log(products);
     };
     getIphones();
   }, [products]);    
