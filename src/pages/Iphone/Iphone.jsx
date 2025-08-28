@@ -17,7 +17,7 @@ function Iphone() {
       console.log(products);
     };
     getIphones();
-  }, []);    
+  }, [products]);    
 
   let flip = true;
   return (

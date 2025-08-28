@@ -16,9 +16,10 @@ const Header = () => {
           >
             ☰
           </button>
-          <a className="navbar-brand mx-auto" href="#">
-            <img src={logo} />
-          </a>
+
+          <Link className="navbar-brand mx-auto" to="/">
+            <img src={logo} alt="Logo" />
+          </Link>
 
           <div className="navbar-collapse collapse">
             <ul className="navbar-nav nav-justified w-100 nav-fill">
